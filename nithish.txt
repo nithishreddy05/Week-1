@@ -1,0 +1,83 @@
+class FootballData
+{
+
+int goals, error,
+float duration,
+PresentGoalTable presentGoalTable;
+
+public FootballData(PreesentGoalTable presentGoalTable)
+
+{
+this.PresentGoalTable = presentGoalTable;
+}
+
+private int getRecentGoals()
+{
+
+return 50;
+
+}
+
+private int getRecentErrors()
+{
+
+return (float) 6.3;
+
+}
+
+public void dataupdated()
+
+{
+
+goals = getRecentGoals();
+errors = getRecentErrors();
+duration = getRecentDuration();
+
+presentGoalTable.latest(goals,fouls,time);
+
+}
+}
+
+class presentGoalTable
+
+{
+private int goals, errors;
+private float duration;
+
+public void latest(int goals, int errors, float duration)
+
+{
+
+this.goals = goals;
+this.errors = errors;
+this.duration = duration;
+display();
+
+}
+
+public void display()
+
+{
+
+system.out.println("\npoint Chart: \n" + "Goals: " + goals + "\nErrors:" + errors + "\nDuration: " + duration);
+
+}
+}
+
+class Main
+
+{
+public static void main(String args[])
+
+{
+
+PresentGoalTable presentGoalTable = new PresentGoalTable();
+
+Footballdata footballData = new FootballData(pointChart);
+
+footballData.datachanged();
+
+}
+}
+
+
